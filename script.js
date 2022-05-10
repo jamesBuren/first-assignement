@@ -12,3 +12,6 @@ function withdraw(amount)   //this function should be called accept not withdraw
       }
        alert("Your Balance Is "+balance);
     }
+
+
+    
