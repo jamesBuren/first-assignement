@@ -16,44 +16,45 @@
 
 // you can use the variable choice for your switch or if/else statement
 // so choice will hold the value of the user input.
+// console log
 //
-
-
 const account = {	
   accountName: 'James',
   balance: 100,
   getBalance: function() {
-    const choice = parseInt(alert('Your current balance is: '+balance));
-    this.goBack(choice);
+    alert('Your current balance is: ' + this.balance);
+    atm();
   },
 
 	deposit: function() {
-		const deposit = parseFloat(prompt('How much would you like to deposit?'));
+		const depositAmount = parseFloat(prompt('How much would you like to deposit?'));
 
-		if (isNaN(deposit) || deposit < 0 || deposit === "" || typeof deposit === 'string') {
+		if (isNaN(depositAmount) || depositAmount <= 0 || depositAmount === "" ) {
 			alert('Error: please enter a number!');
 			deposit();
 		} else {
-			balance += deposit;
-			getbalance();
+			this.balance += deposit;
+			this.getBalance();
 		}
 	},
 
 	withdrawal: function() {
-		const withdrawal = parseFloat(prompt('How much would you like to withdrawal?'));
-		if (isNaN(withdrawal) || withdrawal === '') {
+		const withdrawalAmount = parseFloat(prompt('How much would you like to withdraw?'));
+
+		if (isNaN(withdrawalAmount) || withdrawalAmount <= 0 || withdrawalAmount === "" ) {
 			alert('Error: please enter a number!');
-			withdrawal();
+			deposit();
 		} else {
-			balance -= withdrawal;
-			getbalance();
+			this.balance -= withdrawalAmount;
+			this.getBalance();
 		}
 	},
 
-  getAccountName: function () {
-    const accountName = alert(`Account name: James. Press OK to go back.`);
 
-    
+  getAccountName: function () {
+    //const accountName = alert(`Account name: James. Press OK to go back.`);
+    alert(`Account name is: ${this.accountName}`);
+    atm();
   },
 
 	accountError: function() {
@@ -90,11 +91,9 @@ const account = {
     } else if (choice === 5) {
       account.exitAccount();
     } else {
-      // If the user clicks ok without input or inputs something not on the menu the menu reopens
-      this.atm();
+      
     }
   }
 
   atm();
 
-5
