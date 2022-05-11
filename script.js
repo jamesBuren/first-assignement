@@ -1,17 +1,17 @@
 
 
 //
-//  function atm() {
-//  let choice = parseInt(prompt("Display menu choices here"));
-//  const account = {
-//    accountName: String,
-//    balance: Number (100),
-//  getBalance: function() { },
+// function atm() {
+// let choice = parseInt(prompt("Display menu choices here"));
+// const account = {
+// accountName: String,
+// balance: Number (100),
+// getBalance: function() { },
 // deposit: function() { },
 // withdrawal: function() { },
 // getAccountName: function() { },
-//    accountError: function() { },
-//  exitAccount: function() { },
+// accountError: function() { },
+// exitAccount: function() { },
 // };
 
 // you can use the variable choice for your switch or if/else statement
